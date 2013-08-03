@@ -2,19 +2,16 @@
 
 remove_filter( 'the_content', 'wpautop' );
 
-add_action( 'init', 'create_landingpage_type' );
-function create_landingpage_type(){
+add_action( 'init', 'create_custom_types' );
+function create_custom_types(){
 	
 	register_post_type( 'landing_page',
-			array( 'labels' => array(
-								'name' => __( 'Landing Page' ),
-								'singular_name' => __( 'Landing Pages' )
-				 			   ),
+			array( 'labels' => array('name' => __( 'Landing Page' ), 'singular_name' => __( 'Landing Pages' )),
 				   'public' => true,
 				   'has_archive' => false,
 				   'rewrite' => array('slug' => 'landing'),
 			)
-	);	
+	);		
 	
 }
 

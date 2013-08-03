@@ -8,7 +8,7 @@ body {
     color: #000;    
 }
 
-.single-landing_page {
+.single-landing_page, .home {
 	#page {
 	   padding: 0px;
 	   background-color: transparent;
@@ -29,6 +29,22 @@ body {
 		    font-style: normal;
 		}	    
 	}	
+	.blog-roll {
+	   > h3 {
+	       margin-top: 0px;
+	       margin-bottom: 10px;
+	   }
+	   ul {
+	      li {
+	           padding-bottom: 10px; 
+	      }
+	      h3 {
+	           margin: 0px;
+	           font-size: 18px;
+	           line-height: 22px;
+	      } 
+	   }
+	}
 }
 
 .header, .footer {
@@ -94,6 +110,22 @@ body {
 	}	
 }
 
+.sign-up-top {    
+    label {
+        font-size: 16px;
+    }
+
+    h3 {
+        margin-top: 0px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+        font-size: 16px;
+        padding: 8px;
+        width: 250px;
+    }
+}
+
 .container div.homepage-corners {
     margin-top: 0px;
     border-radius: 0 0 5px 5px;
@@ -143,17 +175,24 @@ body {
     line-height: 24px;
 }
 
-.body-copy .bullets {
-    padding-top: 15px;
-    margin-left: 100px;
-}
+.body-copy {
 
-.body-copy .bullets li, .signup-copy .bullets li, .signup-copy .checklist li {
-    padding-bottom: 15px;
-}
+	.bullets {
+	    padding-top: 15px;
+	    margin-left: 50px;
+	}
 
-.checklist {
-    margin-left: 50px;
+	.bullets li, .signup-copy .bullets li, .signup-copy .checklist li {
+	    padding-bottom: 20px;
+	}
+	
+	ul.checklist {
+	    font-size: 18px;	    
+	    margin-left: 70px;
+	    li {
+	       padding-bottom: 10px;
+	    }
+	}	
 }
 
 .headshot {
@@ -170,20 +209,6 @@ body {
 .testimonial-text {
     font-size: 20px;
     line-height: 32px;
-}
-
-.sign-up-top label {
-    font-size: 16px;
-}
-
-.sign-up-top h3 {
-    margin-top: 0px;
-}
-
-.sign-up-top input[type="text"], .sign-up-top input[type="password"] {
-    font-size: 16px;
-    padding: 8px;
-    width: 250px;
 }
 
 #featuresCarousel .carousel-control {

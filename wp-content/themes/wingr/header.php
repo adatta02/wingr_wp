@@ -41,6 +41,7 @@
 		    					<li><a href="/">Home</a></li>
 		    					<li><a href="/sign-up">Sign Up</a></li>
 		    					<li><a href="/contact">Contact</a></li>
+		    					<li><a class="btn btn-primary" href="http://app.wingr.me">Login</a></li>
 		    				</ul>
 		    			</div>
 		    			<div class="clearfix"></div>
