@@ -18,17 +18,11 @@ function create_landingpage_type(){
 	
 }
 
-/*
-add_action("pre_get_posts", "custom_front_page");
-function custom_front_page($wp_query){
-	
-	if($wp_query->get('page_id') == get_option('page_on_front')){
-		$wp_query->set('post_type', 'landing_page');
-		$wp_query->set('page_id', '7');
-		
-		$wp_query->is_page = 1;
-		$wp_query->is_singular = 1;		
-	}
-	
+add_filter( 'get_pages',  'add_landing_page' );
+function add_landing_page( $pages ) {
+     $my_cpt_pages = new WP_Query( array( 'post_type' => 'landing_page' ) );
+     if ( $my_cpt_pages->post_count > 0 ) {
+         $pages = array_merge( $pages, $my_cpt_pages->posts );
+     }
+     return $pages;
 }
-*/
