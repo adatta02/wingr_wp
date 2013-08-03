@@ -153,17 +153,24 @@
 							</ul>
 						</div>
 					</div>
+					
+					<div class="row-fluid">
+						<div class="span12 centered">
+							<h3>Meet the team</h3>
+						</div>
+					</div>
 							
-					<div class="row-fluid body-copy">
-						<div class="span8">
-
-						</div>
-						<div class="span4">
-							<div class="centered">
-								<img class="headshot" src="/wp-content/themes/wingr/images/headshot.png">
-								<p>Katie R., Dating Concierge, Boston, MA</p>
-							</div>
-						</div>
+					<div class="row-fluid author-bios">
+						<?php foreach( get_concierge_authors() as $author ): ?>
+							<div class="span4">
+								<div class="author-box">
+									<a href="<?php echo $author["link_url"] ?>"><?php echo $author["pic_url"]; ?></a>
+									<p><a href="<?php echo $author["link_url"] ?>">
+										<?php echo $author["first_name"][0]; ?> <?php echo $author["last_name"][0]; ?>
+									</a></p>
+								</div>
+							</div>						
+						<?php endforeach; ?>
 					</div>
 					
 					<div class="row-fluid testimonials">
